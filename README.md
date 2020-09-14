@@ -4,7 +4,7 @@
 springsecurity+jwt+mybatisplus简单的授权实现
 **注意点**
 
-> 需要配置密码加密，否则会报执行到DaoAuthenticationProvider类的additionalAuthenticationChecks中如下代码会出错
+> 需要配置密码加密，否则执行到DaoAuthenticationProvider类的additionalAuthenticationChecks中如下代码会出错
 
 ```java
 	if (!passwordEncoder.matches(presentedPassword, userDetails.getPassword())) {
