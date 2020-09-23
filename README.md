@@ -1,6 +1,10 @@
+
 # my-springboot-test
 练习springboot各种功能
 - 
+[springsecurity练习](https://github.com/Lujunjie123/my-springboot-test/tree/master/springsecurity-test)
+
+
 springsecurity+jwt+mybatisplus简单的授权实现
 **注意点**
 
