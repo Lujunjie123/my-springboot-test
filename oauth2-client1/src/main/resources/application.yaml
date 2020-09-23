@@ -1,0 +1,13 @@
+auth-server: http://localhost:8080/server
+server:
+  port: 8001
+security:
+  oauth2:
+    client:
+      client-id: lu1
+      client-secret: 123456
+      access-token-uri: ${auth-server}/oauth/token
+      user-authorization-uri: ${auth-server}/oauth/authorize
+    resource:
+      jwt:
+        key-uri: ${auth-server}/oauth/token_key

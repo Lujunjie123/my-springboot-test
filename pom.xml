@@ -4,6 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<modules>
 		<module>springsecurity-jwt-test</module>
+        <module>springboot-filter-interceptor-test</module>
+		<module>springsecurity-test</module>
+        <module>springsecurity-oauth2-test</module>
+		<module>oauth2-server</module>
+		<module>oauth2server</module>
+		<module>client1</module>
+		<module>oauth2-client1</module>
+		<module>oauth2-client2</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -22,7 +30,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring-boot.version>2.3.1.RELEASE</spring-boot.version>
+		<spring-boot.version>2.3.3.RELEASE</spring-boot.version>
 		<jackson-databind.version>2.11.0</jackson-databind.version>
 		<junit-jupiter-api.version>5.6.2</junit-jupiter-api.version>
 		<lombok.version>1.18.12</lombok.version>
@@ -30,6 +38,14 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Hoxton.SR8</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
@@ -77,8 +93,21 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<skipTests>true</skipTests>    <!--默认关掉单元测试 -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
