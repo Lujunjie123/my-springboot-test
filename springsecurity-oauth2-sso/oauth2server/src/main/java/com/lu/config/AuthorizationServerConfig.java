@@ -69,14 +69,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.tokenStore(jwtTokenStore()).accessTokenConverter(jwtAccessTokenConverter())
                 .userDetailsService(userDetailsService);
-//        endpoints.tokenStore(jwtTokenStore()).accessTokenConverter(jwtAccessTokenConverter());
-//        DefaultTokenServices tokenServices = (DefaultTokenServices) endpoints.getDefaultAuthorizationServerTokenServices();
-//        tokenServices.setTokenStore(endpoints.getTokenStore());
-//        tokenServices.setSupportRefreshToken(true);
-//        tokenServices.setClientDetailsService(endpoints.getClientDetailsService());
-//        tokenServices.setTokenEnhancer(endpoints.getTokenEnhancer());
-//        tokenServices.setAccessTokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(1)); // 一天有效期
-//        endpoints.tokenServices(tokenServices);
     }
 }
 

@@ -6,13 +6,8 @@
 		<module>springsecurity-jwt-test</module>
         <module>springboot-filter-interceptor-test</module>
 		<module>springsecurity-test</module>
-        <module>springsecurity-oauth2-test</module>
-		<module>oauth2-server</module>
-		<module>oauth2server</module>
-		<module>client1</module>
-		<module>oauth2-client1</module>
-		<module>oauth2-client2</module>
-	</modules>
+        <module>springsecurity-oauth2-sso</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

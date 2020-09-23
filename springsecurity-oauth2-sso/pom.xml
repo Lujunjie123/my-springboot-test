@@ -8,13 +8,20 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <artifactId>springsecurity-oauth2-sso</artifactId>
 
-    <artifactId>oauth2-client1</artifactId>
+    <modules>
+        <module>oauth2server</module>
+        <module>oauth2-client1</module>
+        <module>oauth2-client2</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
