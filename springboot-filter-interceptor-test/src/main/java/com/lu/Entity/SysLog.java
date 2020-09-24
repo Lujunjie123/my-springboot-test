@@ -18,15 +18,15 @@ public class SysLog {
 
     private String username;
 
-    private String operation;
+    private String operation; //日志语句
 
-    private String className;
+    private String className;  //类名
 
-    private String methodName;
+    private String methodName;  //方法名
 
-    private String params;
+    private String params;      //方法参数
 
-    private Long time;
+    private Long time;          //执行时间
 
     @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
