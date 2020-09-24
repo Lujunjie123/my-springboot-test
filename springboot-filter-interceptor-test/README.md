@@ -114,7 +114,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 过滤器要先于拦截器执行，晚于拦截器结束。下图很好的描述了它们的执行时间区别
 
-![过滤器拦截器执行顺序](./执行顺序.png)
+![过滤器拦截器执行顺序](https://github.com/Lujunjie123/my-springboot-test/tree/master/springboot-filter-interceptor-test/执行顺序.png)
 
 ## AOP记录用户日志
 
