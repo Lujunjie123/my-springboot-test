@@ -114,8 +114,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 过滤器要先于拦截器执行，晚于拦截器结束。下图很好的描述了它们的执行时间区别
 
-![过滤器拦截器执行顺序](./执行顺序.png)
-
+![image-20200924100804044](C:\Users\lujunjie\AppData\Roaming\Typora\typora-user-images\image-20200924100804044.png)
 
 ## AOP记录用户日志
 
@@ -143,6 +142,14 @@ public @interface Log {
 ### 定义切面
 
 定义一个LogAspect类，使用`@Aspect`标注让其成为一个切面，切点为使用`@Log`注解标注的方法，使用`@Around`环绕通知：
+
+切入点用法：例如
+
+表示切入到sell开头的controller下的所有方法,但不包含sellUserController下的所有方法
+
+@Pointcut("execution(public * com.xx.controller.sell* . *(..))"
+
++"&& !execution(public * com.xx.controller.sellUserController. *(..))")
 
 ```java
 @Aspect
@@ -268,4 +275,3 @@ public boolean testLog2(int a,String b){
     return true;
 }
 ```
-
